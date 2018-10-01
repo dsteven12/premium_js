@@ -1,9 +1,17 @@
 var todoList = {
   todos: [],
   displayTodos: function() {
-    console.log('My todos: ');
-    for(var text in this.todos) {
-      console.log(this.todos[text].todoText);
+    if(this.todos.length === 0) {
+      console.log('There are currently no todos.')
+    } else {
+      console.log('My todos: ');
+      for(var position in this.todos) {
+        if(this.todos[position].completed !== true) {
+            console.log("( ) " + this.todos[position].todoText);
+        } else {
+            console.log("(X) " + this.todos[position].todoText);
+        }
+      }
     }
   },
   addTodos: function(todoText) {
