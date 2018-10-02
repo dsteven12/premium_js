@@ -92,6 +92,12 @@ var view = {
       todoLi.textContent = todoTextWithCompletion;
       todosUl.appendChild(todoLi);
     }  
+  },
+  createDeleteBtn: function() {
+    var deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.className = 'deleteBtn';
+    return deleteBtn;
   }
 };
 
